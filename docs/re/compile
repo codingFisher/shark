@@ -1,0 +1,5 @@
+#!/bin/bash
+latex shark.tex
+dvipdf shark.dvi shark.pdf
+#latex $1.tex
+for a in `ls shark.* | grep -v tex| grep -v pdf`; do echo $a; rm $a; done

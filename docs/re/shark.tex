@@ -1,0 +1,52 @@
+\documentclass[a4paper,oneside,12pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\newenvironment{SChinese}{
+  \CJKfamily{gkai}
+  \CJKtilde
+  \CJKnospace}{}
+\begin{document}
+%~ \renewcommand{\rmdefault}{ptm}
+\begin{CJK*}{UTF8}{kai}
+\begin{SChinese}
+\begin{center}
+\huge{知识库系统需求说明}\\
+ \textcolor{blue}{\Large{知识系统的随笔博客实现}\\}
+ \normalsize{}
+\vspace{1cm} 
+\begin{tabular}{|l|l|}
+\hline
+开发者\\
+\hline
+赵林\\
+\hline
+解朝勇\\
+\hline
+\end{tabular}
+\end{center}
+\begin{flushleft}
+%\hspace{3cm} 图二 运行结果\\
+\section*{1.模糊需求}
+\begin{itemize}
+\item{写blog}
+\item{email 定时推送， 订阅的形式，将排名前几个的blog发送到用户邮箱}
+\item{用户管理，注册，登陆， 注册的时候，写验证码， 使用reCapture}
+\item{用户配置网站皮肤}
+\item{博客内容允许使用html, 禁用js}
+\item{博客采用模板，方便样式切换}
+\item{允许用户上传图片，后台提供图片处理模块}
+\item{防止机器人灌水，验证码}
+\item{防止恶意访问，洪水攻击，ip频繁访问，要求输入验证码，不再响应需求}
+\item{对于加载很慢的资源，进行缓存，缓存设置一个阈值，防止缓存过大，内存泄露}
+\item{插件机制， 通过hook来扩展系统}
+\item{I18N， 多语言版本}
+\item{在网站根目录下建立docs文件夹，保存基本的设计文档}
+\item{将HTML和文本分离，提供打印版本，打印博客， 则去除一些图片，只打印文本}
+\end{itemize}
+\end{flushleft}
+\end{SChinese}
+\end{CJK*}
+\end{document}
